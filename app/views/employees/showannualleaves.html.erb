@@ -1,0 +1,11 @@
+<h1>Annual Leaves</h1>
+ 
+<%= form_for :employee, url: employee_path(@employee), method: :patch do |f| %>
+ 
+  <p>
+    <%= f.label :gender %><br>
+    <%= f.text_field :gender %>
+  </p>
+
+ 
+<% end %>

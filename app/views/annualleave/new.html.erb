@@ -1,0 +1,41 @@
+<h1>Create New Holiday Request</h1>
+
+<%= form_for :annualleave, url: employee_annualleave_index_path do |f| %>
+ 
+  <p>
+    <%= f.label :startdate, "Start Date"%><br>
+    <%= f.date_field :startdate %>
+  </p>
+ 
+  <p>
+    <%= f.label :enddate %><br>
+    <%= f.date_field :enddate%>
+  </p>
+
+  <p>
+    <%= f.label :leavecomment %><br>
+    <%= f.text_field :leavecomment %>
+   </p>
+
+    <p>
+    <%= f.label :created_at %><br>
+    <%= f.date_field:created_at %>
+   </p>
+    
+   
+   
+
+
+
+
+
+    <%= f.hidden_field :employee_id, :value => @employee.id %>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+#<%= link_to 'Back', employees_path %>
+

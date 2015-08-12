@@ -1,0 +1,48 @@
+<H1> Employee Details </H1>
+
+<p>
+  <strong>Employee Id:</strong>
+  <%= @employee.id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @employee.title %>
+</p>
+ 
+<p>
+  <strong>Firstname:</strong>
+  <%= @employee.firstname %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @employee.surname %>
+</p>
+ 
+<p>
+  <strong>Date of Birth:</strong>
+  <%= @employee.dob %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @employee.address %>
+</p>
+ 
+<p>
+  <strong>Phonenumber:</strong>
+  <%= @employee.phonenumber %>
+</p>
+
+<p>
+  <strong>Emailid:</strong>
+  <%= @employee.emailid %>
+</p>
+ 
+<p>
+  <strong>Gender:</strong>
+  <%= @employee.gender %>
+</p>
+ 
+<%= link_to 'Edit', edit_employee_path(@employee) %> | <%= link_to 'Back to index', employees_path %> | <%= link_to 'Annual Leaves', employee_annualleave_index_path(@employee) %>

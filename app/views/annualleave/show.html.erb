@@ -1,0 +1,26 @@
+<H1> Annual Leave Request Details </H1>
+
+
+
+<p>
+  <strong>Annual Leave starts on:</strong>
+  <%= @annualleave.startdate %>
+</p>
+
+<p>
+  <strong>Annual Leave ends on:</strong>
+  <%= @annualleave.enddate %>
+</p>
+ 
+<p>
+  <strong>comment:</strong>
+  <%= @annualleave.leavecomment %>
+</p>
+
+<p>
+  <strong>Note:</strong>
+  <%= @annualleave.created_at %>
+</p>
+
+
+<%= link_to 'Back to index', employees_path %> |

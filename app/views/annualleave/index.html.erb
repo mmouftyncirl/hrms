@@ -1,0 +1,32 @@
+<h1>Annual Leaves</h1>
+
+
+<% if @employee.annualleave %> 
+
+  <% @employee.annualleave.each do |leave|%>
+ 
+ <p>
+    <%= leave.startdate %><br>
+    <%= leave.enddate %><br>
+    <%= leave.leavecomment %><br>
+    <%= leave.created_at %><br>
+  
+
+
+ </p>
+
+
+  <% end %>
+
+ 
+<% end %>
+
+
+<%= link_to 'Request Annual Leave', new_employee_annualleave_path %> <br><br>
+
+<%= link_to 'New Employee', new_employee_path %>
+
+
+
+
+
