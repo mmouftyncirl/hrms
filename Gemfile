@@ -3,6 +3,15 @@ source 'https://rubygems.org'
 gem 'activeadmin', github: 'activeadmin'
 
   gem 'devise'
+group :production do
+  gem 'pg'
+  gem "activerecord-postgresql-adapter"
+end
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
