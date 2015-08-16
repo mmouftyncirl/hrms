@@ -1,30 +1,44 @@
-<h1>Annual Leaves</h1>
+<h2>Annual Leaves</h2><br>
 
 
+<table class="mytable">
+  <tr>
+    <th>Employee Id</th>
+
+    <th>Annual leave starts on</th>
+
+    <th>Annual leave ends on</th><br>
+
+    <th>Comment</th>
+
+    <th>Requested for Annual leave on</th>
+ 
 <% if @employee.annualleave %> 
 
   <% @employee.annualleave.each do |leave|%>
- 
- <p>
-    <%= leave.startdate %><br>
-    <%= leave.enddate %><br>
-    <%= leave.leavecomment %><br>
-    <%= leave.created_at %><br>
-  
 
+<tr>
+      <td><%= @employee.id %></td>
 
- </p>
+      <td><%= leave.startdate %></td>
 
+      <td><%= leave.enddate %></td>
 
+      <td><%= leave.leavecomment  %></td>
+	<td><%= leave.created_at %></td>
+</tr>
   <% end %>
+</table>
 
  
 <% end %>
 
 
-<%= link_to 'Request Annual Leave', new_employee_annualleave_path %> <br><br>
+<br>
 
-<%= link_to 'New Employee', new_employee_path %>
+<%= link_to 'Request Annual Leave', new_employee_annualleave_path %>|
+<%= link_to 'New Employee', new_employee_path %>|
+<%= link_to 'Back to index', employees_path %>  
 
 
 

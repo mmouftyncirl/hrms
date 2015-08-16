@@ -9,16 +9,22 @@ class EmployeesController < ApplicationController
 
 
   def show
-    @employee = Employee.find(params[:id])
+#This is Employee controller 
+#I have created my different pages    
+
+
+
+#The following code create empoyee id 
+@employee = Employee.find(params[:id])
     #@employee.annualleave = Annualleave.new
   end
 
-
+#The following create new employee
   def new
   @employee  = Employee.new
   end
 
-
+#The following code enable employee to edit their profile.
   def edit
   @employee  = Employee.find(params[:id])
   end
@@ -33,12 +39,12 @@ class EmployeesController < ApplicationController
 		render 'new'
 	end
   end
-
+#this code shows the annual leaves
   def showannualleaves
 	
   end
  
-
+#the following code update the employee
  def update
   @employee  = Employee.find(params[:id])
  
@@ -48,6 +54,7 @@ class EmployeesController < ApplicationController
   end
  end
 
+#This code enables user to destroy the profiles
 
   def destroy
     
@@ -55,9 +62,9 @@ class EmployeesController < ApplicationController
     @employee  = Employee.find(params[:id])
     @employee.destroy
  
-    redirect_to employee _path
+    redirect_to employees_path
   end
-
+#on the following code passing parameters.
  
  private
   def employee_params

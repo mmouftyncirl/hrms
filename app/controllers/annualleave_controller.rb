@@ -1,3 +1,5 @@
+# This is Annual leave controller 
+# This controller pass through the employees ID
 class AnnualleaveController < ApplicationController
 
 	def index

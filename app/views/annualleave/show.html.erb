@@ -1,6 +1,4 @@
-<H1> Annual Leave Request Details </H1>
-
-
+<H1> Annual Leave Request Details </H1><br><br>
 
 <p>
   <strong>Annual Leave starts on:</strong>
@@ -18,9 +16,9 @@
 </p>
 
 <p>
-  <strong>Note:</strong>
+  <strong>Requested for Annual leaves on:</strong>
   <%= @annualleave.created_at %>
 </p>
 
 
-<%= link_to 'Back to index', employees_path %> |
+<%= link_to 'Back to index', employees_path %> | <%= link_to 'New Employee', new_employee_path %>
